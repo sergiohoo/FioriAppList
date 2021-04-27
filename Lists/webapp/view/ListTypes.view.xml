@@ -57,7 +57,19 @@
                                         </items>
                                     </List>
                                 </IconTabFilter>
-                                <IconTabFilter text="{i18n>customList}"></IconTabFilter>
+                                <IconTabFilter text="{i18n>customList}">
+                                    <List items="{/News}">
+                                        <items>
+                                            <CustomListItem >
+                                                <layout:Grid defaultSpan="XL3 L3 M6 S12">
+                                                    <Text text="{Title}" />
+                                                    <Text text="{Author}" />
+                                                    <Text text="{Description}" />
+                                                </layout:Grid>
+                                            </CustomListItem>
+                                        </items>
+                                    </List>
+                                </IconTabFilter>
                             </items>
                         </IconTabBar>
                     </content>
