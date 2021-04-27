@@ -24,7 +24,16 @@
                                         </items>
                                     </List>
                                 </IconTabFilter>
-                                <IconTabFilter text="{i18n>standardList}"></IconTabFilter>
+                                <IconTabFilter text="{i18n>standardList}">
+                                    <List items="{/Products}">
+                                        <items>
+                                            <StandardListItem title="{Material} {Brand} {Model}"
+                                                            description="{Weight}"
+                                                            info="{Price} {Currency}"
+                                                            type="Active" />
+                                        </items>
+                                    </List>
+                                </IconTabFilter>
                                 <IconTabFilter text="{i18n>inputList}"></IconTabFilter>
                                 <IconTabFilter text="{i18n>notificationList}"></IconTabFilter>
                                 <IconTabFilter text="{i18n>customList}"></IconTabFilter>
