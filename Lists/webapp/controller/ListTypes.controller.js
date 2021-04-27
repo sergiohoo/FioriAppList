@@ -12,6 +12,14 @@ sap.ui.define([
                 var oJSONModel = new sap.ui.model.json.JSONModel();
                 oJSONModel.loadData("./localService/mockdata/ListData.json");
                 this.getView().setModel(oJSONModel);
-			}
+            },
+            getGroupHeader: function (oGroup) {
+                var groupHeaderListItem = new sap.m.GroupHeaderListItem({
+                    title : oGroup.key,
+                    upperCase : true
+                });
+                
+                return groupHeaderListItem;
+            }
 		});
 	});

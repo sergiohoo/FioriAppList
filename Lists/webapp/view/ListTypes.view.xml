@@ -30,7 +30,13 @@
                                     </List>
                                 </IconTabFilter>
                                 <IconTabFilter text="{i18n>standardList}">
-                                    <List items="{/Products}">
+                                    <List items="{path: '/Products',
+                                                    sorter: {
+                                                        path: 'Brand',
+                                                        descending: false,
+                                                        group: true
+                                                    },
+                                                    groupHeaderFactory: '.getGroupHeader'}">
                                         <items>
                                             <StandardListItem title="{Material} {Brand} {Model}"
                                                             description="{Weight}"
