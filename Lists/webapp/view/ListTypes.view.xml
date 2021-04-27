@@ -34,7 +34,17 @@
                                         </items>
                                     </List>
                                 </IconTabFilter>
-                                <IconTabFilter text="{i18n>inputList}"></IconTabFilter>
+                                <IconTabFilter text="{i18n>inputList}">
+                                    <List items="{/Products}">
+                                        <items>
+                                            <InputListItem label="{Brand}">
+                                                <Select items="{Properties}">
+                                                    <core:Item key="{Id}" text="{Text}" />
+                                                </Select>
+                                            </InputListItem>
+                                        </items>
+                                    </List>
+                                </IconTabFilter>
                                 <IconTabFilter text="{i18n>notificationList}"></IconTabFilter>
                                 <IconTabFilter text="{i18n>customList}"></IconTabFilter>
                             </items>
