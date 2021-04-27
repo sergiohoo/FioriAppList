@@ -9,7 +9,9 @@ sap.ui.define([
 
 		return Controller.extend("logaligroup.Lists.controller.ListTypes", {
 			onInit: function () {
-
+                var oJSONModel = new sap.ui.model.json.JSONModel();
+                oJSONModel.loadData("./localService/mockdata/ListData.json");
+                this.getView().setModel(oJSONModel);
 			}
 		});
 	});
