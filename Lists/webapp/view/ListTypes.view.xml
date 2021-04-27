@@ -45,7 +45,18 @@
                                         </items>
                                     </List>
                                 </IconTabFilter>
-                                <IconTabFilter text="{i18n>notificationList}"></IconTabFilter>
+                                <IconTabFilter text="{i18n>notificationList}">
+                                    <List items="{/News}">
+                                        <items>
+                                            <NotificationListItem title="{Title}"
+                                                description="{Description}"
+                                                showCloseButton="{ShowCloseButton}"
+                                                priority="{Priority}"
+                                                unread="{Unread}"
+                                                authorName="{Author}" />
+                                        </items>
+                                    </List>
+                                </IconTabFilter>
                                 <IconTabFilter text="{i18n>customList}"></IconTabFilter>
                             </items>
                         </IconTabBar>
