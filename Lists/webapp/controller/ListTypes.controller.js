@@ -29,7 +29,7 @@ sap.ui.define([
                 var i18nModel = this.getView().getModel("i18n").getResourceBundle();
 
                 if(selectedItems.length === 0) {
-                    sap.m.MessageToast.show(i18nModel.getText("noSelection"), {duration : 20000});
+                    sap.m.MessageToast.show(i18nModel.getText("noSelection"));
                 }
                 else {
                     var textMessage = i18nModel.getText("selection");
@@ -39,7 +39,7 @@ sap.ui.define([
                         textMessage = textMessage + " - " + oContext.Material;
                     }
 
-                    sap.m.MessageToast.show(textMessage, {duration : 20000});
+                    sap.m.MessageToast.show(textMessage);
                 }
             },
 
@@ -50,7 +50,7 @@ sap.ui.define([
                 var i18nModel = this.getView().getModel("i18n").getResourceBundle();
 
                 if(selectedItems.length === 0) {
-                    sap.m.MessageToast.show(i18nModel.getText("noSelection"), {duration : 20000});
+                    sap.m.MessageToast.show(i18nModel.getText("noSelection"));
                 }
                 else {
                     var textMessage = i18nModel.getText("selection");
@@ -70,7 +70,8 @@ sap.ui.define([
                         return !arrayId.includes(p.Id);
                     });
                     model.setProperty("/Products", products);
-                    sap.m.MessageToast.show(textMessage, {duration : 20000});
+                    standardList.removeSelections();
+                    sap.m.MessageToast.show(textMessage);
                 }
             }
 		});
