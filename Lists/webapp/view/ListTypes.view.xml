@@ -62,7 +62,7 @@
                                     </List>
                                 </IconTabFilter>
                                 <IconTabFilter text="{i18n>inputList}">
-                                    <List items="{/Products}">
+                                    <List items="{/Products}" mode="Delete" delete="onDeleteRow">
                                         <items>
                                             <InputListItem label="{Brand}">
                                                 <Select id="slProperties"

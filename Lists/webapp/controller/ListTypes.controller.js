@@ -73,6 +73,18 @@ sap.ui.define([
                     standardList.removeSelections();
                     sap.m.MessageToast.show(textMessage);
                 }
+            },
+
+            onDeleteRow: function (oEvent) {
+                var selectedRow = oEvent.getParameter("listItem");
+                var context = selectedRow.getBindingContext();
+                var splitPath = context.getPath().split("/");
+                var indexSelectedRow = splitPath[splitPath.length - 1];
+
+                var model = this.getView().getModel();
+                var products = model.getProperty("/Products");
+                products.splice(indexSelectedRow,1);
+                model.refresh();
             }
 		});
 	});
