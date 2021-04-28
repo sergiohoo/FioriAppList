@@ -39,7 +39,11 @@
                                             <core:Item key="SingleSelectMaster" text="{i18n>singleSelectMaster}" />
                                         </items>
                                     </Select>
-                                    <List items="{path: '/Products',
+
+                                    <Button text="{i18n>showSelectedItems}" press="onShowSelectedRow" class="sapUiSmallMarginBegin"></Button>
+
+                                    <List id="standardList"
+                                            items="{path: '/Products',
                                                     sorter: {
                                                         path: 'Brand',
                                                         descending: false,
