@@ -30,7 +30,7 @@
                                     </List>
                                 </IconTabFilter>
                                 <IconTabFilter text="{i18n>standardList}">
-                                    <Select selectedKey="{/typeSelection}">
+                                    <Select id="slTypeSelection" selectedKey="{/typeSelection}">
                                         <items>
                                             <core:Item key="None" text="{i18n>none}" />
                                             <core:Item key="MultiSelect" text="{i18n>multiSelect}" />
@@ -41,6 +41,8 @@
                                     </Select>
 
                                     <Button text="{i18n>showSelectedItems}" press="onShowSelectedRow" class="sapUiSmallMarginBegin"></Button>
+
+                                    <Button text="{i18n>deleteSelectedItems}" press="onDeleteSelectedRow" class="sapUiSmallMarginBegin"></Button>
 
                                     <List id="standardList"
                                             items="{path: '/Products',
@@ -63,7 +65,8 @@
                                     <List items="{/Products}">
                                         <items>
                                             <InputListItem label="{Brand}">
-                                                <Select items="{Properties}">
+                                                <Select id="slProperties"
+                                                        items="{path: 'Properties', templateShareable:false}">
                                                     <core:Item key="{Id}" text="{Text}" />
                                                 </Select>
                                             </InputListItem>
